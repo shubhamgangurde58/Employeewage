@@ -16,10 +16,10 @@ public class EmployeeWagecomp {
 		final int PART_TIME_WAGE = 4;
 		System.out.println("Welcome to Employee Wage Compulatiopn");
 		
+		Random random = new Random();
 		for(int i=1;i<=WORKING_DAYS;i++)
 		{
 			System.out.println("DAY="+i);
-			Random random = new Random();
 			attendance = random.nextInt(9) % 2;
 				switch(attendance)
 				{
