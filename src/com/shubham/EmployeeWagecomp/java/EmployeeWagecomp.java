@@ -10,16 +10,17 @@ public class EmployeeWagecomp {
 		int employee_type = 0;
 		int dailywage = 0;
 		int attendance = 0 ;
-		final int WORKING_DAYS = 20;
+		int total_working_hr = 0;
+		int WORKING_DAYS = 1;
 		final int WAGE_PER_HR = 20;
 		final int FULL_TIME_WAGE = 8;
 		final int PART_TIME_WAGE = 4;
 		System.out.println("Welcome to Employee Wage Compulatiopn");
 		
 		Random random = new Random();
-		for(int i=1;i<=WORKING_DAYS;i++)
+		while(total_working_hr <= 100 && WORKING_DAYS <= 20 )
 		{
-			System.out.println("DAY="+i);
+			System.out.println("DAY="+WORKING_DAYS);
 			attendance = random.nextInt(9) % 2;
 				switch(attendance)
 				{
@@ -34,10 +35,12 @@ public class EmployeeWagecomp {
 						case 0:
 							System.out.println("Employee is partTime");
 							dailywage = PART_TIME_WAGE * WAGE_PER_HR;
+							total_working_hr += PART_TIME_WAGE;
 						    break;
 						case 1:
 							System.out.println("Employee is fullTime");
 							dailywage = FULL_TIME_WAGE * WAGE_PER_HR;
+							total_working_hr +=  FULL_TIME_WAGE;
 							break;
 						}
 						 
@@ -46,7 +49,9 @@ public class EmployeeWagecomp {
 						break;
 				}
 				System.out.println("-------------------------");
+				WORKING_DAYS++;
 			}
+		       System.out.println("Total_Working_hr="+total_working_hr);
 		       System.out.println("full_mouth_wage="+full_mouth_wage);
 		}
 }		
