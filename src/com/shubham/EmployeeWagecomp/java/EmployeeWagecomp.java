@@ -4,9 +4,7 @@ import java.util.Random;
 
 public class EmployeeWagecomp {
 
-	public static void main(String[] args) {
-		
-        int full_mouth_wage = 0;
+	 int full_mouth_wage = 0;
 		int employee_type = 0;
 		int dailywage = 0;
 		int attendance = 0 ;
@@ -15,6 +13,8 @@ public class EmployeeWagecomp {
 		final int WAGE_PER_HR = 20;
 		final int FULL_TIME_WAGE = 8;
 		final int PART_TIME_WAGE = 4;
+		
+		public void employeewagecalc() {
 		System.out.println("Welcome to Employee Wage Compulatiopn");
 		
 		Random random = new Random();
@@ -53,5 +53,10 @@ public class EmployeeWagecomp {
 			}
 		       System.out.println("Total_Working_hr="+total_working_hr);
 		       System.out.println("full_mouth_wage="+full_mouth_wage);
+		}
+		public static void main(String[] args) {
+		
+			EmployeeWagecomp employeeWagecomp = new EmployeeWagecomp();
+					employeeWagecomp.employeewagecalc();
 		}
 }		
